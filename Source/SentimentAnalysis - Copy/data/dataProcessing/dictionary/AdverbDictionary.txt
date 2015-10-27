@@ -1,0 +1,749 @@
+lạ lùng~5
+thú vị~5
+lộng lẫy~5
+hiếm có~5
+xuất sắc~5
+tuyệt vời~5
+tuyệt diệu~5
+ngoạn mục~5
+hoàn hảo~5
+hảo hạng~5
+hết sức đặc biệt~5
+hoàn toàn~5
+kỳ diệu~5
+tuyệt trần~5
+không chê vào đâu được~5
+độc quyền~5
+thần thoại~5
+đáng yêu~5
+vẻ vang~5
+rực rỡ~5
+kinh ngạc~5
+sáng chói~5
+vô cùng~5
+vinh quang~5
+hết sức~5
+thích thú~4
+trông đẹp mắt~4
+hân hoan~4
+to lớn~4
+thần kỳ~4
+hào phóng~4
+thanh lịch~4
+đáng ngưỡng mộ~4
+tuyệt hảo~4
+đáng yêu~4
+tài tình~4
+huy hoàng~4
+mới mẻ~4
+hạnh phúc~4
+thân ái~4
+tột bậc~4
+phi thường~4
+quyến rũ~4
+ngon~4
+một cách kỳ diệu~4
+vui nhộn~4
+tốt đẹp~4
+sáng dạ~4
+vui mừng~4
+hấp dẫn~4
+thanh tú~4
+từ bi~4
+rạng rỡ~4
+nhiệt tình~4
+có thể nạp lại~4
+hoà bình~3
+phong cách~3
+rộng rãi~3
+tỉ mỉ~3
+êm ái~3
+rất lơn~3
+lịch sự~3
+yêu thương~3
+nhân dân~3
+dễ thương~3
+ung dung~3
+giỏi~3
+giàu có~3
+cứng cáp~3
+mới~3
+không phải trả tiền~3
+chua chát~-3
+phấn khởi~3
+đúng đắn~3
+tích cực~3
+gợi thích thú~3
+thuận lợi~3
+sáng tạo~3
+say đắm~3
+thông thạo~3
+duyên dáng~3
+khéo léo~3
+ấn tượng~3
+trí tuệ~3
+sinh động~3
+lạ thường~3
+khôn ngoan~3
+tưởng tượng~3
+chính xác~3
+liền mạch~3
+tự do~3
+sắc sảo~3
+gan dạ~3
+trong sáng~3
+linh hoạt~3
+âu yếm~3
+một cách khôn ngoan~3
+dễ dàng~3
+đẹp~3
+nhộn nhịp~3
+khổng lồ~3
+đắt~-3
+dư dả~3
+thành công~3
+hài hước~3
+kiên nhẫn~3
+đáng nhớ~3
+giải trí truyền hình~3
+mạnh dạn~3
+hùng mạnh~3
+thuận tiện~3
+gây tiếng vang lớn~3
+lãng mạn~3
+đáng ngạc nhiên~3
+anh dũng~3
+hăng hái~3
+có hồn~3
+rộng lượng~3
+can đảm~3
+dũng cảm~3
+chi phí thấp~3
+đáng tin cậy~3
+giá cả phải chăng~3
+không tốn kém~3
+may thay~2
+chuyên nghiệp~2
+rõ rệt~2
+phức tạp~-2
+nhanh trí~2
+nhất quán~2
+xác thực~2
+trữ tình~2
+phù hợp~2
+chân thật~2
+thích hợp~2
+sâu~2
+thật lòng~2
+luôn luôn~2
+vui vẻ~2
+gan góc~2
+công phu~2
+tươi~2
+kiên quyết~2
+chiều ý~2
+lôi cuốn~2
+có hiệu quả~2
+đầy màu sắc~2
+tăng lên~2
+bình tĩnh~2
+vinh dự~2
+thương yêu~2
+tài giỏi~2
+tinh nghịch~2
+chu đáo~2
+hoàn toàn đúng~2
+trung thực~2
+có mục đích~2
+may mắn~2
+dịu dàng~2
+thoải mái~2
+đầy đủ~2
+háo hức~2
+gọn gàng~2
+thành thạo~2
+hứa hẹn~2
+xinh~2
+tuyệt~2
+tế nhị~2
+nhanh nhẹn~2
+hồn nhiên~2
+trìu mến~2
+rất nhiều~2
+trung thành~2
+mạch lạc~2
+phản tư~2
+ích lợi~2
+cao thượng~2
+khiêm nhường~2
+thâm thuý~2
+say sưa~2
+tha thiết~2
+lễ phép~2
+thật thú vị~2
+nhiệm màu~2
+tình cảm~2
+thông minh~2
+mịn~2
+tiện lợi~2
+tinh túy~2
+hào hoa~2
+chiến lược~2
+khả quan~2
+nghệ thuật~2
+có đạo đức~2
+khiêu dâm~-2
+cảm động~2
+mạnh mẽ~2
+lạc quan~2
+mạnh~2
+khí thế~2
+thông cảm~2
+lưu luyến~2
+trang nhã~2
+tự tin~2
+hoành tráng~2
+tốt đẹp~2
+một cách an toàn~2
+kiên định~2
+có trách nhiệm~2
+tự hào~2
+dễ hiểu~2
+vĩ đại~2
+xác thực~2
+tranh không khoan nhượng~2
+tốt hơn~2
+nhanh~2
+miễn thuế~2
+trong sạch~2
+sạch sẽ~2
+phổ biến~1
+trực giác~1
+đáng kinh ngạc~1
+sạch~1
+phong cách~1
+nổi tiếng~1
+dồi dào~1
+kỹ thuật số~1
+âm thầm~1
+không kịp thở~1
+tự nhiên~1
+khôi hài~1
+choáng váng~1
+cẩn thận~1
+quả quyết~1
+vô hại~1
+mật thiết~1
+trọn vẹn~1
+chính thức~1
+đáng tin~1
+ngay lập tức~1
+đáng quan tâm~1
+duy nhất~1
+hợp lý~1
+sẵn sàng~1
+cổ điển~1
+có hiệu lực~1
+nổi bật~1
+thích hơn~1
+đầu tiên~1
+phần lớn~1
+khiêm tốn~1
+phải chăng~1
+đủ~1
+đáng kể~1
+có thể công nhận~1
+thực chất~1
+thích đáng~1
+nhẹ nhàng~1
+chắc chắn~1
+mãnh liệt~1
+kiên cố~1
+vô lượng~1
+long trọng~1
+nhiệt liệt~1
+công bằng~1
+có tài năng~1
+chắc~1
+đúng mức~1
+bình thường~1
+thuần~1
+thuyết phục~1
+với giá rẻ~1
+trung tâm~1
+rõ ràng~1
+có ý thức~1
+xứng~1
+đủ dùng~1
+cởi mở~1
+tương đối~1
+đáp ứng~1
+minh bạch~1
+mau~1
+nhạy cảm~1
+một cách tự nhiên~1
+sẵn lòng~1
+đứng đắn~1
+tốt~1
+tốn kém~1
+khôn khéo~1
+thực sự~1
+hợp pháp~1
+vô vàn~1
+mau lẹ~1
+dễ~1
+dễ thấy~1
+quý~1
+tình cờ~1
+hữu ích~1
+thông suốt~1
+tuôn ra~1
+dần dần~1
+đáng chú ý~1
+cao cả~1
+đều đặn~1
+tự động~1
+lặng lẽ~1
+tin được~1
+thỏa đáng~1
+bất thường~-1
+đúng~1
+trên toàn cầu~1
+trân trọng~1
+độc lập~1
+to lớn~1
+thực~1
+thực tế~1
+mềm~1
+lớn~1
+ngay thẳng~1
+không theo quy ước~1
+khoa học~1
+không thể lường trước~1
+thường dùng~1
+khêu gợi~1
+thành thật~1
+tham vọng~1
+thờ ơ~1
+an toàn~1
+gọn~1
+thêm~1
+chấp nhận được~1
+về kinh tế~1
+chức năng~1
+dễ đọc~1
+tùy chọn~1
+cạnh tranh~1
+đáng lưu ý~1
+điềm tĩnh~1
+điên dại~-1
+bao la~-1
+diêm dúa~-1
+thiển cận~-1
+đột ngột~-1
+thẳng thừng~-1
+không tự nhiên~-1
+làm nản lòng~-1
+hiếm~-1
+chặt~-1
+lạnh lùng~-1
+nhẹ~-1
+giảm mạnh~-1
+láo xược~-1
+gang tấc~-1
+tồi tệ~-1
+ngắn~-1
+giản dị~1
+gây bối rối~-1
+lờ mờ~-1
+nghiêm trọng~-1
+lỏng lẻo~-1
+thái quá~-1
+không đều~-1
+nặng~-1
+cứng~-1
+chắc hẳn~1
+bồn chồn~-1
+thương mại~1
+do dự~-1
+ít~-1
+từ xa~-1
+hoang dại~-1
+bâng khuâng~-1
+cừ~1
+vô tận~-1
+lười nhác~-1
+tiêu cực~-1
+tối thiểu~-1
+tột cùng~-1
+che chở~1
+tinh quái~-1
+ngắn gọn~1
+bất đắc dĩ~-1
+chầm chậm~-1
+không cần thiết~-1
+kín đáo~-1
+trong suốt~1
+liều lĩnh~-1
+xúc động~-1
+bứt rứt~-1
+hiếm khi~-1
+thô lỗ~-1
+không nhất quán~-1
+nặng nề~-1
+không nghỉ~-1
+phức~-1
+kỳ quặc~-1
+thông thường~1
+khác thường~-1
+hợp thời trang~1
+dài~-1
+lâm sàng~-1
+thận trọng~-1
+láu~-1
+tôn giáo~-1
+khó~-1
+triệt để~-1
+giả dối~-1
+kỳ quái~-1
+không hay~-1
+bất tỉnh nhân sự~-1
+dư thừa~-1
+tối tăm~-1
+khó hiểu~-1
+lỏng~-1
+nhân tạo~-1
+tuân theo~-1
+không thường xuyên~-1
+xin lỗi~-1
+gắn bó chặt~-1
+khoa trương~-1
+ngờ vực~-1
+đơn giản~1
+rẻ~-1
+chậm~-1
+muộn~-1
+cố chấp~-1
+không đầy đủ~-1
+hay thay đổi~-1
+trớ trêu~-1
+lạ~-1
+bướng bỉnh~-1
+không rõ ràng~-1
+tối~-1
+bẩm sinh~1
+đột xuất~-1
+không thực tế~-1
+biết ơn~2
+bất hợp lý~-2
+lặp đi lặp lại~-2
+không thích hợp~-2
+khó giải thích~-2
+thừa~-2
+xấc láo~-2
+nghèo nàn~-2
+không thương xót~-2
+khó chịu~-2
+uể oải~-2
+ồn ào~-2
+chỉ~-2
+nghiêm~-2
+quyết liệt~-2
+bỉ ổi~-2
+thô~-2
+hờ hững~-2
+trần trụi~-2
+vụng về~-2
+phi lý~-2
+không chuyên nghiệp~-2
+buồn cười~-2
+nhục nhã~-2
+oan sai~-2
+khó tin~-2
+nhầm lẫn~-2
+thật đáng buồn~-2
+bị cáo buộc~-2
+đoán trước~2
+bằng phẳng~2
+tội~-2
+đến phát bực~-2
+chậm chạp~-2
+miễn cưỡng~-2
+không ngừng~-2
+không công bằng~-2
+ngu ngốc~-2
+không may~-2
+lo lắng~-2
+khéo chọn~2
+vô ơn~-2
+bất công~-2
+ác liệt~-2
+lãnh đạm~-2
+khắc nghiệt~-2
+trơ trụi~-2
+yếu kém~-2
+inh ỏi~-2
+dâm đãng~-2
+thoái thác~-2
+mệt nhọc~-2
+khó khăn~-2
+mơ hồ~-2
+thiếu thuyết phục~-2
+sốt ruột~-2
+thiếu chính xác~-2
+đáng tiếc~-2
+dữ dội~-2
+quá chừng~-2
+tối dạ~-2
+không đúng cách~-2
+sơ sài~-2
+ôn tồn~-2
+ganh tị~-2
+yếu ớt~-2
+làm phiền~-2
+tùy tiện~-2
+không nguôi~-2
+thẫn thờ~-2
+tuyệt vọng~-2
+không suy nghĩ~-2
+tiếc~-2
+quá mức~-2
+không thành công~-2
+run rẩy~-2
+khập khiễng~-2
+không kiểm soát được~-2
+nghiêm khắc~-2
+cộc cằn~-2
+gây nhầm lẫn~-2
+bừa bộn~-2
+nghi ngờ~-2
+bất hợp pháp~-2
+sai~-2
+áp đảo~-2
+ngượng ngùng~-2
+thiếu suy xét~-2
+chung chung~-2
+sâu sắc~2
+quái gở~-2
+làm lung lay~-2
+ảm đạm~-2
+ầm ĩ~-2
+rầu rĩ~-2
+đáng buồn~-2
+khó hiểu~-2
+hời hợt~-2
+kém~-2
+quát~-2
+không hấp dẫn~-2
+ương ngạnh~-2
+cần cù~2
+không thuận lợi~-2
+bừa bãi~-2
+xấc xược~-2
+phiền muộn~-2
+cẩu thả~-2
+điên cuồng~-2
+lố bịch~-2
+say rượu~-2
+hấp tấp~-2
+lúng túng~-2
+trống rỗng~-2
+tham ăn~-2
+ngây thơ~-2
+sai trái~-3
+dài dòng~-3
+quanh co~-3
+xông xáo~3
+cay độc~-3
+giận dữ~-3
+khó ưa~-3
+nan y~-3
+dứt khoát~-3
+trâng tráo~-3
+thô bạo~-3
+kém cỏi~-3
+một cách mù quáng~-3
+vô vọng~-3
+dã man~-3
+chán thật~-3
+vô lý~-3
+nặng tay~-3
+chán ngắt~-3
+dày đặt~-3
+với vẻ đe dọa~-3
+nguy hiểm~-3
+Đáng ngại~-3
+thô thiển~-3
+không hạnh phúc~-3
+trơ trẽn~-3
+rít lên~-3
+chán chường~-3
+ngang nhiên~-3
+ích kỷ~-3
+xấu~-3
+kỳ lạ~-3
+bằng đồ thị~-3
+bi kịch~-3
+khó giải quyết~-3
+kinh niên~-3
+chết~-3
+chí tử~-3
+điên rồ~-3
+ngạo mạn~-3
+xấu hổ~-3
+tồi~-3
+lố lăng~-4
+không thể chịu nổi~-4
+không đáng tha thứ~-4
+ranh mãnh~-4
+xoá sổ~-4
+ngang bướng~-4
+ngớ ngẩn~-4
+không chấp nhận được~-4
+có tội~-4
+tàn bạo~-4
+ngược đời~-4
+đau đớn~-4
+khét tiếng~-4
+ngốc nghếch~-4
+thảm hại~-4
+tục tiểu~-4
+đáng thương~-4
+tẻ nhạt~-4
+độc hại~-4
+gây phẫn nộ~-4
+bệnh hoạn~-4
+ngu si~-4
+kinh khủng~-5
+khó nhọc~-5
+không thể tha thứ~-5
+thảm khốc~-5
+khiếp~-5
+khủng khiếp~-5
+rất tệ~-5
+tàn nhẫn~-5
+ghê sợ~-5
+đáng kinh sợ~-5
+khổ sở~-5
+kinh hoàng~-5
+ủ rũ~-5
+độc ác~-5
+gớm ghiếc~-5
+u sầu~-5
+kỳ dị~-5
+trầm trọng~-5
+xấu xa~-5
+kinh tởm~-5
+hung bạo~-5
+đáng kinh sợ~-5
+thô tục~-5
+chăm chú~2
+một thời gian ngắn~-1
+vắng vẻ~-1
+trên hè phố~1
+láu lỉnh~-1
+cực kỳ~1
+bằng giọng mũi~-1
+khéo tay~2
+gian lận~-3
+tinh tươm~4
+thưa thớt~-1
+vui~2
+hay~4
+trang hoàng~2
+xinh xắn~2
+năng động~2
+giả mạo~-3
+không đủ~-1
+thượng võ~2
+rời rạc~-2
+chính đáng~2
+độ lượng~1
+siêng năng~2
+âm mưu phụ~-2
+thẳng thắn~1
+lòng vòng~-1
+xúi dục~-1
+sáng suốt~2
+đắt tiền~-1
+ngăn cản~-3
+ngây~-1
+vờ vĩnh~-4
+trịnh trọng~1
+đoạt giải thưởng~5
+phiền~-2
+vui đùa~3
+không liên tục~-1
+tử tế~2
+sôi nổi~2
+hùng hồn~3
+quái~-3
+đáng sợ~-1
+đúng~1
+có đạo lý~1
+vững chắc~1
+thiếu thận trọng~-2
+hơi~-1
+không ngờ~-2
+khô khan~-1
+buồn rầu~-4
+lanh lẹ~1
+ghê tởm~-3
+không thương tiếc~-3
+công minh~1
+hoà nhã~2
+phong phú~3
+sung sướng~4
+về mặt lịch sử~1
+cộc lốc~-1
+lừ đừ~-1
+gượng~-1
+nhanh chóng~1
+lạc đường~-1
+cay đắng~-2
+ám ảnh~-3
+bất lực~-3
+đáng khen~1
+điên tiết~-4
+không thể lay chuyển~-2
+thiếu tế nhị~-1
+bình thản~1
+hào hứng~3
+nhân từ~1
+vu vơ~-1
+bối rối~-2
+vội vàng~-2
+vừa phải~1
+thô sơ~-2
+vô cùng to lớn~5
+tự phụ~-1
+êm dịu~1
+yếu đuối~-2
+uy nghi~4
+xảo quyệt~-4
+làm mất trí~-1
+khoác lác~-1
+vượt trội~4
+dại dột~-2
+kiên trì~3
+chọc tức~-2
+trúng~1
+hão huyền~-2
+vắn tắt~-1
+chán nản~-2
+có ích~1
+đáng tởm~-3
+cuồng tín~-3
+ẩu~-1
+thậm tệ~-4
+bền vững~2
+khinh người~-3
+thất thường~-1
+tiết kiệm~1
+quá đáng~-4
+tự mãn~-2
+không đúng~-1
+bất lợi~-2
+không đau đớn~1
+sai lầm~-1
+lén lút~-1
