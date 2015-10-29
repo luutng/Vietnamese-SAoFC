@@ -1,7 +1,5 @@
 <doc>
 	<s>
-		<w pos="M">1</w>
-		<w pos=":">:</w>
 		<w pos="C">Vì thế</w>
 		<w pos=",">,</w>
 		<w pos="N">cô</w>
@@ -33,9 +31,7 @@
 		<w pos="A">hợp thời</w>
 	</s>
 	<s>
-		<w pos="M">1</w>
-		<w pos=":">:</w>
-		<w pos="N">Cho đến</w>
+		<w pos="E">Cho đến</w>
 		<w pos="M">một</w>
 		<w pos="N">ngày</w>
 		<w pos="N">cô</w>
@@ -50,8 +46,6 @@
 		<w pos="A">chung</w>
 	</s>
 	<s>
-		<w pos="M">2</w>
-		<w pos=":">:</w>
 		<w pos="N">Anh</w>
 		<w pos="A">đúng ra</w>
 		<w pos="R">cũng</w>
@@ -81,8 +75,6 @@
 		<w pos="V">nắng gió</w>
 	</s>
 	<s>
-		<w pos="M">2</w>
-		<w pos=":">:</w>
 		<w pos="R">Thậm chí</w>
 		<w pos=",">,</w>
 		<w pos="N">lúc</w>
@@ -103,8 +95,6 @@
 		<w pos="N">người</w>
 	</s>
 	<s>
-		<w pos="M">2</w>
-		<w pos=":">:</w>
 		<w pos="R">Chỉ</w>
 		<w pos="V">là</w>
 		<w pos="E">ở</w>
@@ -123,8 +113,6 @@
 		<w pos="R">được</w>
 	</s>
 	<s>
-		<w pos="M">2</w>
-		<w pos=":">:</w>
 		<w pos="A">Giống</w>
 		<w pos="C">như</w>
 		<w pos="L">bao</w>
@@ -154,8 +142,6 @@
 		<w pos="A">riêng</w>
 	</s>
 	<s>
-		<w pos="M">3</w>
-		<w pos=":">:</w>
 		<w pos="N">Thoạt đầu</w>
 		<w pos=",">,</w>
 		<w pos="N">cô</w>
@@ -182,8 +168,6 @@
 		<w pos="A">thoải mái</w>
 	</s>
 	<s>
-		<w pos="M">3</w>
-		<w pos=":">:</w>
 		<w pos="R">Hình như</w>
 		<w pos="N">anh</w>
 		<w pos="V">là</w>
@@ -218,8 +202,6 @@
 		<w pos="V">tin</w>
 	</s>
 	<s>
-		<w pos="M">4</w>
-		<w pos=":">:</w>
 		<w pos="R">Dần dà</w>
 		<w pos=",">,</w>
 		<w pos="N">cô</w>
@@ -241,8 +223,6 @@
 		<w pos="V">vặt vãnh</w>
 	</s>
 	<s>
-		<w pos="M">4</w>
-		<w pos=":">:</w>
 		<w pos="N">Anh</w>
 		<w pos="V">sống</w>
 		<w pos="R">rất</w>
@@ -251,8 +231,6 @@
 		<w pos="A">chu đáo</w>
 	</s>
 	<s>
-		<w pos="M">4</w>
-		<w pos=":">:</w>
 		<w pos="V">Cho</w>
 		<w pos="E">tới</w>
 		<w pos="M">một</w>

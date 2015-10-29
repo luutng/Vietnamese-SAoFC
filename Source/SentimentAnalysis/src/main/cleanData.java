@@ -11,13 +11,13 @@ public class cleanData {
      taggerProcessing();
      }*/
     static void exFileSentence() {
-        int numOfPara = 0;
+        int numSentOfPara = 0;
         try {
             String sent = "";
             try (BufferedReader inputStream = new BufferedReader(new FileReader("data\\dataProcessing\\subjectivity\\sen\\senTemp.txt"));
-                    BufferedWriter outputStream = new BufferedWriter(new FileWriter("data\\dataProcessing\\subjectivity\\sen\\sen.txt"))) {
+                    BufferedWriter outputStream = new BufferedWriter(new FileWriter("data\\dataProcessing\\subjectivity\\sen\\sen.txt"));
+                    BufferedWriter outputStreamForPara = new BufferedWriter(new FileWriter("data\\dataProcessing\\subjectivity\\sen\\numOfPara.txt"))) {
                 while ((sent = inputStream.readLine()) != null) {
-                    numOfPara++;
                     if (!checkLink(sent)) {
                         sent = FontConveter.Main.converter(FontType.UNICODETH, FontType.UNICODE, sent);
                         String[] sent1 = sent.split("\\?");
@@ -31,13 +31,16 @@ public class cleanData {
                                             && sent6.length() > 2) {
                                         sent6 = sent6.trim();
                                         if (!sent6.equalsIgnoreCase("") && !sent6.equalsIgnoreCase(" ")) {
-                                            outputStream.append(numOfPara + ": " + sent6 + "\n");
+                                            outputStream.append(sent6 + "\n");
+                                            numSentOfPara++;
                                         }
                                     }
                                 }
                             }
                         }
                     }
+                    outputStreamForPara.append(numSentOfPara + "\n");
+                    numSentOfPara = 0;
                 }
             }
         } catch (Exception e) {

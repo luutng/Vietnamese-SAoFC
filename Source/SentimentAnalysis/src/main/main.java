@@ -143,4 +143,115 @@ public class main {
             return "Very low";
         }
     }
+    
+    //--Đọc kết quả
+    static String[][] readResults() throws FileNotFoundException, IOException {
+        int n = 0;
+        try (BufferedReader subResults = new BufferedReader(new FileReader("src\\Data\\outputSub"))) {
+            while (subResults.readLine() != null) {
+                n++;
+            }
+        }
+        String[][] arr = new String[n][3];
+        String[] arrSub = new String[n];
+        String[] arrSen = new String[n];
+        try {
+            String line = "";
+            try (FileReader fr = new FileReader("data\\dataProcessing\\subjectivity\\sen\\senSentences.txt");
+                    BufferedReader br = new BufferedReader(fr)) {
+                int i = 0;
+                while ((line = br.readLine()) != null && i < n) {
+                    arr[i][0] = line;
+                    i++;
+                }
+            }
+            try (FileReader fr = new FileReader("src\\Data\\outputSub");
+                    BufferedReader br = new BufferedReader(fr)) {
+                int i = 0;
+                while ((line = br.readLine()) != null && i < n) {
+                    arrSub[i] = line;
+                    i++;
+                }
+            }
+            try (FileReader fr = new FileReader("src\\Data\\outputSen");
+                    BufferedReader br = new BufferedReader(fr)) {
+                int i = 0;
+                while ((line = br.readLine()) != null) {
+                    arrSen[i] = line;
+                    i++;
+                }
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int j = 0;
+        for (int i = 0; i < arrSub.length; i++) {
+            arr[i][1] = arrSub[i];
+            if (arr[i][1].equalsIgnoreCase("1.0")) {
+                arr[i][2] = arrSen[j];
+                j++;
+            } else {
+                arr[i][2] = "---";
+            }
+        }
+        j = 0;
+        return arr;
+    }
+    
+    static String[][] readResultsPara() throws FileNotFoundException, IOException {
+
+        int numOfPara = 0;
+        try (BufferedReader para = new BufferedReader(new FileReader("data\\dataProcessing\\subjectivity\\sen\\senTemp.txt"))) {
+            while (para.readLine() != null) {
+                numOfPara++;
+            }
+        }
+
+        int[] arrNumSentOfPara = new int[numOfPara];
+        String line;
+        try (BufferedReader readNumOfPara = new BufferedReader(new FileReader("data\\dataProcessing\\subjectivity\\sen\\numOfPara.txt"))) {
+            int t = 0;
+            while ((line = readNumOfPara.readLine()) != null) {
+                arrNumSentOfPara[t] = Integer.parseInt(line);
+                t++;
+            }
+        }
+
+        String[][] arr = readResults();
+        String[][] arrResults = new String[numOfPara][2];
+        int tLine = 0;
+        for (int i = 0; i < numOfPara; i++) {
+            int numPas = 0;
+            int numSub = 0;
+            int numPos = 0;
+            int numNeg = 0;
+            int t1 = tLine;
+            int t2 = t1 + arrNumSentOfPara[i];
+            for (int j = t1; j < t2; j++) {
+                if (arr[j][1].equalsIgnoreCase("0.0")) {
+                    numPas++;
+                } else {
+                    numSub++;
+                    if (arr[j][2].equalsIgnoreCase("0.0")) {
+                        numNeg++;
+                    } else {
+                        numPos++;
+                    }
+                }
+            }
+            if (numSub == 0) {
+                arrResults[i][0] = "0.0";
+                arrResults[i][1] = "---";
+            } else {
+                arrResults[i][0] = "1.0";
+                if (numNeg > numPos) {
+                    arrResults[i][1] = "0.0";
+                } else {
+                    arrResults[i][1] = "1.0";
+                }
+            }
+        }
+
+        return arrResults;
+    }
 }

@@ -5,26 +5,17 @@
  */
 package main;
 
-import static SentimentAnalysis.subjectivity.*;
-import static SentimentAnalysis.sentiment.*;
-import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFileChooser;
-import javax.swing.table.DefaultTableModel;
-import static main.main.*;
-
 /**
  *
  * @author luu
  */
-public class frmSentimentAnalysis extends javax.swing.JFrame {
+public class frmSentimentForPara extends javax.swing.JFrame {
 
-    static DefaultTableModel modelResults;
-
-    public frmSentimentAnalysis() {
+    /**
+     * Creates new form frmSentimentForPara
+     */
+    public frmSentimentForPara() {
         initComponents();
-        modelResults = (DefaultTableModel) tbResults.getModel();
     }
 
     /**
@@ -36,7 +27,6 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
         jpData = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -51,6 +41,11 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
         cbPassive = new javax.swing.JCheckBox();
         cbPositive = new javax.swing.JCheckBox();
         cbNegative = new javax.swing.JCheckBox();
+        jLabel13 = new javax.swing.JLabel();
+        cbTypeData = new javax.swing.JComboBox();
+        btnFile = new javax.swing.JButton();
+        btnClean = new javax.swing.JButton();
+        btnAnalyze = new javax.swing.JButton();
         jpResults = new javax.swing.JPanel();
         jpSubjectivity = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -78,17 +73,8 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
         lbPerPos = new javax.swing.JLabel();
         lbPerNeg = new javax.swing.JLabel();
         lbAttSen = new javax.swing.JLabel();
-        btnFile = new javax.swing.JButton();
-        btnClean = new javax.swing.JButton();
-        btnAnalyze = new javax.swing.JButton();
-        cbTypeData = new javax.swing.JComboBox();
-        jLabel13 = new javax.swing.JLabel();
 
-        jToggleButton1.setText("jToggleButton1");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Sentiment Analysis");
-        setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jpData.setBorder(javax.swing.BorderFactory.createTitledBorder("Data"));
 
@@ -126,18 +112,6 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
             }
         });
         jScrollPane5.setViewportView(tbResults);
-        if (tbResults.getColumnModel().getColumnCount() > 0) {
-            tbResults.getColumnModel().getColumn(0).setMinWidth(50);
-            tbResults.getColumnModel().getColumn(0).setPreferredWidth(50);
-            tbResults.getColumnModel().getColumn(0).setMaxWidth(50);
-            tbResults.getColumnModel().getColumn(1).setResizable(false);
-            tbResults.getColumnModel().getColumn(2).setMinWidth(75);
-            tbResults.getColumnModel().getColumn(2).setPreferredWidth(75);
-            tbResults.getColumnModel().getColumn(2).setMaxWidth(75);
-            tbResults.getColumnModel().getColumn(3).setMinWidth(75);
-            tbResults.getColumnModel().getColumn(3).setPreferredWidth(75);
-            tbResults.getColumnModel().getColumn(3).setMaxWidth(75);
-        }
 
         jTabbedPane1.addTab("Result", jScrollPane5);
 
@@ -167,7 +141,7 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
             .addGroup(jpDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(jpDataLayout.createSequentialGroup()
                         .addComponent(cbSubjectivity)
                         .addGap(18, 18, 18)
@@ -183,7 +157,7 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
         jpDataLayout.setVerticalGroup(
             jpDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpDataLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -194,6 +168,39 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
                     .addComponent(cbNegative))
                 .addContainerGap())
         );
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel13.setForeground(java.awt.SystemColor.activeCaption);
+        jLabel13.setText("Type:");
+
+        cbTypeData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Default", "Education", "Movie", "Sport" }));
+        cbTypeData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTypeDataActionPerformed(evt);
+            }
+        });
+
+        btnFile.setText("File");
+        btnFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFileActionPerformed(evt);
+            }
+        });
+
+        btnClean.setText("Clean");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
+
+        btnAnalyze.setText("Analyze");
+        btnAnalyze.setEnabled(false);
+        btnAnalyze.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnalyzeActionPerformed(evt);
+            }
+        });
 
         jpResults.setBorder(javax.swing.BorderFactory.createTitledBorder("Results"));
 
@@ -437,39 +444,6 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnFile.setText("File");
-        btnFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFileActionPerformed(evt);
-            }
-        });
-
-        btnClean.setText("Clean");
-        btnClean.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCleanActionPerformed(evt);
-            }
-        });
-
-        btnAnalyze.setText("Analyze");
-        btnAnalyze.setEnabled(false);
-        btnAnalyze.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAnalyzeActionPerformed(evt);
-            }
-        });
-
-        cbTypeData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Default", "Education", "Movie", "Sport" }));
-        cbTypeData.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTypeDataActionPerformed(evt);
-            }
-        });
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel13.setForeground(java.awt.SystemColor.activeCaption);
-        jLabel13.setText("Type:");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -515,6 +489,32 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tbResultsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbResultsMouseClicked
+        try {
+            cbNegative.setSelected(false);
+            cbPassive.setSelected(false);
+            cbPositive.setSelected(false);
+            cbSubjectivity.setSelected(false);
+            int row = tbResults.getSelectedRow();
+            txtSentence.setText(tbResults.getModel().getValueAt(row, 1).toString());
+            if (tbResults.getModel().getValueAt(row, 2).toString().equalsIgnoreCase("0.0")) {
+                cbPassive.setSelected(true);
+            } else {
+                cbSubjectivity.setSelected(true);
+                if (tbResults.getModel().getValueAt(row, 3).toString().equalsIgnoreCase("0.0")) {
+                    cbNegative.setSelected(true);
+                } else {
+                    cbPositive.setSelected(true);
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_tbResultsMouseClicked
+
+    private void cbTypeDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTypeDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbTypeDataActionPerformed
 
     private void btnFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileActionPerformed
         JFileChooser chooser = new JFileChooser("");
@@ -577,74 +577,41 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
             trainSubjectivityIndirectForSentence();
             //trainSubjectivityDirForSentence();
             subSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\subjectivity\\sen\\");
-            subSub = readResult(new File("outputSub"), "src\\Data\\", "1.0");
-            subPerSub = (double) subSub / subSen * 100;
-            subPas = subSen - subSub;
-            subPerPas = (double) 100 - subPerSub;
-            lbSenSub.setText(Integer.toString(subSen));
-            lbSub.setText(Integer.toString(subSub));
-            lbPerSub.setText((double) Math.round(subPerSub * 10) / 10 + "%");
-            lbPas.setText(Integer.toString(subPas));
-            lbPerPas.setText((double) Math.round(subPerPas * 10) / 10 + "%");
-            lbAttSub.setText(checkAttention(subPerSub));
+                subSub = readResult(new File("outputSub"), "src\\Data\\", "1.0");
+                    subPerSub = (double) subSub / subSen * 100;
+                    subPas = subSen - subSub;
+                    subPerPas = (double) 100 - subPerSub;
+                    lbSenSub.setText(Integer.toString(subSen));
+                    lbSub.setText(Integer.toString(subSub));
+                    lbPerSub.setText((double) Math.round(subPerSub * 10) / 10 + "%");
+                    lbPas.setText(Integer.toString(subPas));
+                    lbPerPas.setText((double) Math.round(subPerPas * 10) / 10 + "%");
+                    lbAttSub.setText(checkAttention(subPerSub));
 
-            exSentimentFileForSentence();
-            trainSentimentIndirectForSentence();
-            //trainSentimentDirForSentence();
-            senSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\sentiment\\sen\\");
-            senPos = readResult(new File("outputSen"), "src\\Data\\", "1.0");
-            senPerPos = (double) senPos / senSen * 100;
-            senNeg = senSen - senPos;
-            senPerNeg = (double) 100 - senPerPos;
-            lbSenSen.setText(Integer.toString(senSen));
-            lbPos.setText(Integer.toString(senPos));
-            lbPerPos.setText((double) Math.round(senPerPos * 10) / 10 + "%");
-            lbNeg.setText(Integer.toString(senNeg));
-            lbPerNeg.setText((double) Math.round(senPerNeg * 10) / 10 + "%");
-            lbAttSen.setText(checkAttention(senPerPos));
+                    exSentimentFileForSentence();
+                    trainSentimentIndirectForSentence();
+                    //trainSentimentDirForSentence();
+                    senSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\sentiment\\sen\\");
+                        senPos = readResult(new File("outputSen"), "src\\Data\\", "1.0");
+                            senPerPos = (double) senPos / senSen * 100;
+                            senNeg = senSen - senPos;
+                            senPerNeg = (double) 100 - senPerPos;
+                            lbSenSen.setText(Integer.toString(senSen));
+                            lbPos.setText(Integer.toString(senPos));
+                            lbPerPos.setText((double) Math.round(senPerPos * 10) / 10 + "%");
+                            lbNeg.setText(Integer.toString(senNeg));
+                            lbPerNeg.setText((double) Math.round(senPerNeg * 10) / 10 + "%");
+                            lbAttSen.setText(checkAttention(senPerPos));
 
-            showResults();
-        } catch (IOException ex) {
-            Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
-        }
+                            showResults();
+                        } catch (IOException ex) {
+                            Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
+                        }
     }//GEN-LAST:event_btnAnalyzeActionPerformed
 
-    private void tbResultsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbResultsMouseClicked
-        try {
-            cbNegative.setSelected(false);
-            cbPassive.setSelected(false);
-            cbPositive.setSelected(false);
-            cbSubjectivity.setSelected(false);
-            int row = tbResults.getSelectedRow();
-            txtSentence.setText(tbResults.getModel().getValueAt(row, 1).toString());
-            if (tbResults.getModel().getValueAt(row, 2).toString().equalsIgnoreCase("0.0")) {
-                cbPassive.setSelected(true);
-            } else {
-                cbSubjectivity.setSelected(true);
-                if (tbResults.getModel().getValueAt(row, 3).toString().equalsIgnoreCase("0.0")) {
-                    cbNegative.setSelected(true);
-                } else {
-                    cbPositive.setSelected(true);
-                }
-            }
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_tbResultsMouseClicked
-
-    private void cbTypeDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTypeDataActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbTypeDataActionPerformed
-
-    //--Hiển thị kết quả
-    private void showResults() throws IOException {
-        modelResults.setRowCount(0);
-        String[][] arr = readResults();
-        for (int i = 0; i < arr.length; i++) {
-            modelResults.insertRow(modelResults.getRowCount(),
-                    new Object[]{Integer.toString(i + 1), arr[i][0], arr[i][1], arr[i][2]});
-        }
-    }
-
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -659,23 +626,20 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmSentimentAnalysis.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSentimentForPara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmSentimentAnalysis.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSentimentForPara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmSentimentAnalysis.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSentimentForPara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmSentimentAnalysis.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSentimentForPara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmSentimentAnalysis().setVisible(true);
+                new frmSentimentForPara().setVisible(true);
             }
         });
     }
@@ -707,7 +671,6 @@ public class frmSentimentAnalysis extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel jpData;
     private javax.swing.JPanel jpResults;
     private javax.swing.JPanel jpSentiment;
