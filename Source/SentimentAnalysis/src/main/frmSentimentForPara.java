@@ -5,17 +5,25 @@
  */
 package main;
 
-/**
- *
- * @author luu
- */
+import static SentimentAnalysis.subjectivity.*;
+import static SentimentAnalysis.sentiment.*;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.table.DefaultTableModel;
+import static main.main.*;
+
 public class frmSentimentForPara extends javax.swing.JFrame {
+
+    static DefaultTableModel modelResultsPara;
 
     /**
      * Creates new form frmSentimentForPara
      */
     public frmSentimentForPara() {
         initComponents();
+        modelResultsPara = (DefaultTableModel) tbResultsPara.getModel();
     }
 
     /**
@@ -30,22 +38,22 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jpData = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtaTest = new javax.swing.JTextArea();
+        txtaTestPara = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtaClean = new javax.swing.JTextArea();
+        txtaCleanPara = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
-        tbResults = new javax.swing.JTable();
+        tbResultsPara = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        txtSentence = new javax.swing.JTextArea();
-        cbSubjectivity = new javax.swing.JCheckBox();
-        cbPassive = new javax.swing.JCheckBox();
-        cbPositive = new javax.swing.JCheckBox();
-        cbNegative = new javax.swing.JCheckBox();
+        txtSentencePara = new javax.swing.JTextArea();
+        cbSubjectivityPara = new javax.swing.JCheckBox();
+        cbPassivePara = new javax.swing.JCheckBox();
+        cbPositivePara = new javax.swing.JCheckBox();
+        cbNegativePara = new javax.swing.JCheckBox();
         jLabel13 = new javax.swing.JLabel();
-        cbTypeData = new javax.swing.JComboBox();
-        btnFile = new javax.swing.JButton();
-        btnClean = new javax.swing.JButton();
-        btnAnalyze = new javax.swing.JButton();
+        cbTypeDataPara = new javax.swing.JComboBox();
+        btnFilePara = new javax.swing.JButton();
+        btnCleanPara = new javax.swing.JButton();
+        btnAnalyzePara = new javax.swing.JButton();
         jpResults = new javax.swing.JPanel();
         jpSubjectivity = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -54,12 +62,12 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        lbSub = new javax.swing.JLabel();
-        lbPas = new javax.swing.JLabel();
-        lbSenSub = new javax.swing.JLabel();
-        lbPerSub = new javax.swing.JLabel();
-        lbPerPas = new javax.swing.JLabel();
-        lbAttSub = new javax.swing.JLabel();
+        lbSubPara = new javax.swing.JLabel();
+        lbPasPara = new javax.swing.JLabel();
+        lbSenSubPara = new javax.swing.JLabel();
+        lbPerSubPara = new javax.swing.JLabel();
+        lbPerPasPara = new javax.swing.JLabel();
+        lbAttSubPara = new javax.swing.JLabel();
         jpSentiment = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -67,30 +75,30 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        lbPos = new javax.swing.JLabel();
-        lbNeg = new javax.swing.JLabel();
-        lbSenSen = new javax.swing.JLabel();
-        lbPerPos = new javax.swing.JLabel();
-        lbPerNeg = new javax.swing.JLabel();
-        lbAttSen = new javax.swing.JLabel();
+        lbPosPara = new javax.swing.JLabel();
+        lbNegPara = new javax.swing.JLabel();
+        lbSenSenPara = new javax.swing.JLabel();
+        lbPerPosPara = new javax.swing.JLabel();
+        lbPerNegPara = new javax.swing.JLabel();
+        lbAttSenPara = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jpData.setBorder(javax.swing.BorderFactory.createTitledBorder("Data"));
 
-        txtaTest.setColumns(20);
-        txtaTest.setRows(5);
-        jScrollPane1.setViewportView(txtaTest);
+        txtaTestPara.setColumns(20);
+        txtaTestPara.setRows(5);
+        jScrollPane1.setViewportView(txtaTestPara);
 
         jTabbedPane1.addTab("Test", jScrollPane1);
 
-        txtaClean.setColumns(20);
-        txtaClean.setRows(5);
-        jScrollPane2.setViewportView(txtaClean);
+        txtaCleanPara.setColumns(20);
+        txtaCleanPara.setRows(5);
+        jScrollPane2.setViewportView(txtaCleanPara);
 
         jTabbedPane1.addTab("Data Cleaned", jScrollPane2);
 
-        tbResults.setModel(new javax.swing.table.DefaultTableModel(
+        tbResultsPara.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -106,33 +114,33 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tbResults.addMouseListener(new java.awt.event.MouseAdapter() {
+        tbResultsPara.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbResultsMouseClicked(evt);
+                tbResultsParaMouseClicked(evt);
             }
         });
-        jScrollPane5.setViewportView(tbResults);
+        jScrollPane5.setViewportView(tbResultsPara);
 
         jTabbedPane1.addTab("Result", jScrollPane5);
 
-        txtSentence.setEditable(false);
-        txtSentence.setColumns(20);
-        txtSentence.setLineWrap(true);
-        txtSentence.setRows(4);
-        txtSentence.setWrapStyleWord(true);
-        jScrollPane3.setViewportView(txtSentence);
+        txtSentencePara.setEditable(false);
+        txtSentencePara.setColumns(20);
+        txtSentencePara.setLineWrap(true);
+        txtSentencePara.setRows(4);
+        txtSentencePara.setWrapStyleWord(true);
+        jScrollPane3.setViewportView(txtSentencePara);
 
-        cbSubjectivity.setText("Subjectivity");
-        cbSubjectivity.setEnabled(false);
+        cbSubjectivityPara.setText("Subjectivity");
+        cbSubjectivityPara.setEnabled(false);
 
-        cbPassive.setText("Passive");
-        cbPassive.setEnabled(false);
+        cbPassivePara.setText("Passive");
+        cbPassivePara.setEnabled(false);
 
-        cbPositive.setText("Positive");
-        cbPositive.setEnabled(false);
+        cbPositivePara.setText("Positive");
+        cbPositivePara.setEnabled(false);
 
-        cbNegative.setText("Negative");
-        cbNegative.setEnabled(false);
+        cbNegativePara.setText("Negative");
+        cbNegativePara.setEnabled(false);
 
         javax.swing.GroupLayout jpDataLayout = new javax.swing.GroupLayout(jpData);
         jpData.setLayout(jpDataLayout);
@@ -141,15 +149,15 @@ public class frmSentimentForPara extends javax.swing.JFrame {
             .addGroup(jpDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
                     .addGroup(jpDataLayout.createSequentialGroup()
-                        .addComponent(cbSubjectivity)
+                        .addComponent(cbSubjectivityPara)
                         .addGap(18, 18, 18)
-                        .addComponent(cbPassive)
+                        .addComponent(cbPassivePara)
                         .addGap(18, 18, 18)
-                        .addComponent(cbPositive)
+                        .addComponent(cbPositivePara)
                         .addGap(18, 18, 18)
-                        .addComponent(cbNegative)
+                        .addComponent(cbNegativePara)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane3))
                 .addContainerGap())
@@ -162,10 +170,10 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbSubjectivity)
-                    .addComponent(cbPassive)
-                    .addComponent(cbPositive)
-                    .addComponent(cbNegative))
+                    .addComponent(cbSubjectivityPara)
+                    .addComponent(cbPassivePara)
+                    .addComponent(cbPositivePara)
+                    .addComponent(cbNegativePara))
                 .addContainerGap())
         );
 
@@ -173,32 +181,32 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jLabel13.setForeground(java.awt.SystemColor.activeCaption);
         jLabel13.setText("Type:");
 
-        cbTypeData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Default", "Education", "Movie", "Sport" }));
-        cbTypeData.addActionListener(new java.awt.event.ActionListener() {
+        cbTypeDataPara.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Default", "Education", "Movie", "Sport" }));
+        cbTypeDataPara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTypeDataActionPerformed(evt);
+                cbTypeDataParaActionPerformed(evt);
             }
         });
 
-        btnFile.setText("File");
-        btnFile.addActionListener(new java.awt.event.ActionListener() {
+        btnFilePara.setText("File");
+        btnFilePara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFileActionPerformed(evt);
+                btnFileParaActionPerformed(evt);
             }
         });
 
-        btnClean.setText("Clean");
-        btnClean.addActionListener(new java.awt.event.ActionListener() {
+        btnCleanPara.setText("Clean");
+        btnCleanPara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCleanActionPerformed(evt);
+                btnCleanParaActionPerformed(evt);
             }
         });
 
-        btnAnalyze.setText("Analyze");
-        btnAnalyze.setEnabled(false);
-        btnAnalyze.addActionListener(new java.awt.event.ActionListener() {
+        btnAnalyzePara.setText("Analyze");
+        btnAnalyzePara.setEnabled(false);
+        btnAnalyzePara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAnalyzeActionPerformed(evt);
+                btnAnalyzeParaActionPerformed(evt);
             }
         });
 
@@ -230,28 +238,28 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jLabel1.setForeground(java.awt.SystemColor.activeCaption);
         jLabel1.setText("Sentence:");
 
-        lbSub.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbSub.setForeground(new java.awt.Color(153, 0, 0));
-        lbSub.setText("0");
+        lbSubPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbSubPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbSubPara.setText("0");
 
-        lbPas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPas.setForeground(new java.awt.Color(153, 0, 0));
-        lbPas.setText("0");
+        lbPasPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPasPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPasPara.setText("0");
 
-        lbSenSub.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbSenSub.setForeground(new java.awt.Color(153, 0, 0));
-        lbSenSub.setText("0");
+        lbSenSubPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbSenSubPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbSenSubPara.setText("0");
 
-        lbPerSub.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPerSub.setForeground(new java.awt.Color(153, 0, 0));
-        lbPerSub.setText("0%");
+        lbPerSubPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPerSubPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPerSubPara.setText("0%");
 
-        lbPerPas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPerPas.setForeground(new java.awt.Color(153, 0, 0));
-        lbPerPas.setText("0%");
+        lbPerPasPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPerPasPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPerPasPara.setText("0%");
 
-        lbAttSub.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbAttSub.setForeground(new java.awt.Color(153, 0, 0));
+        lbAttSubPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbAttSubPara.setForeground(new java.awt.Color(153, 0, 0));
 
         javax.swing.GroupLayout jpSubjectivityLayout = new javax.swing.GroupLayout(jpSubjectivity);
         jpSubjectivity.setLayout(jpSubjectivityLayout);
@@ -263,7 +271,7 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                     .addGroup(jpSubjectivityLayout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbAttSub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lbAttSubPara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jpSubjectivityLayout.createSequentialGroup()
                         .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jpSubjectivityLayout.createSequentialGroup()
@@ -272,20 +280,20 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbSenSub, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbSub, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lbSenSubPara, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbSubPara, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jpSubjectivityLayout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lbPas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(lbPasPara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbPerSub, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                            .addComponent(lbPerPas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(lbPerSubPara, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                            .addComponent(lbPerPasPara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jpSubjectivityLayout.setVerticalGroup(
@@ -294,23 +302,23 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(lbSenSub))
+                    .addComponent(lbSenSubPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(lbSub)
-                    .addComponent(lbPerSub))
+                    .addComponent(lbSubPara)
+                    .addComponent(lbPerSubPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbPas)
-                    .addComponent(lbPerPas))
+                    .addComponent(lbPasPara)
+                    .addComponent(lbPerPasPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSubjectivityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(lbAttSub))
+                    .addComponent(lbAttSubPara))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -340,28 +348,28 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         jLabel7.setForeground(java.awt.SystemColor.activeCaption);
         jLabel7.setText("Sentence:");
 
-        lbPos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPos.setForeground(new java.awt.Color(153, 0, 0));
-        lbPos.setText("0");
+        lbPosPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPosPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPosPara.setText("0");
 
-        lbNeg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbNeg.setForeground(new java.awt.Color(153, 0, 0));
-        lbNeg.setText("0");
+        lbNegPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbNegPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbNegPara.setText("0");
 
-        lbSenSen.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbSenSen.setForeground(new java.awt.Color(153, 0, 0));
-        lbSenSen.setText("0");
+        lbSenSenPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbSenSenPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbSenSenPara.setText("0");
 
-        lbPerPos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPerPos.setForeground(new java.awt.Color(153, 0, 0));
-        lbPerPos.setText("0%");
+        lbPerPosPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPerPosPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPerPosPara.setText("0%");
 
-        lbPerNeg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbPerNeg.setForeground(new java.awt.Color(153, 0, 0));
-        lbPerNeg.setText("0%");
+        lbPerNegPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbPerNegPara.setForeground(new java.awt.Color(153, 0, 0));
+        lbPerNegPara.setText("0%");
 
-        lbAttSen.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbAttSen.setForeground(new java.awt.Color(153, 0, 0));
+        lbAttSenPara.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbAttSenPara.setForeground(new java.awt.Color(153, 0, 0));
 
         javax.swing.GroupLayout jpSentimentLayout = new javax.swing.GroupLayout(jpSentiment);
         jpSentiment.setLayout(jpSentimentLayout);
@@ -373,7 +381,7 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                     .addGroup(jpSentimentLayout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbSenSen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbSenSenPara, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jpSentimentLayout.createSequentialGroup()
                         .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -384,17 +392,17 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                         .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpSentimentLayout.createSequentialGroup()
                                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbPos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lbPosPara, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbNegPara, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel11))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbPerPos, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                                    .addComponent(lbPerNeg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(lbAttSen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(lbPerPosPara, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                                    .addComponent(lbPerNegPara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lbAttSenPara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jpSentimentLayout.setVerticalGroup(
@@ -403,23 +411,23 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(lbSenSen))
+                    .addComponent(lbSenSenPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(lbPos)
+                    .addComponent(lbPosPara)
                     .addComponent(jLabel9)
-                    .addComponent(lbPerPos))
+                    .addComponent(lbPerPosPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(lbNeg)
+                    .addComponent(lbNegPara)
                     .addComponent(jLabel11)
-                    .addComponent(lbPerNeg))
+                    .addComponent(lbPerNegPara))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpSentimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(lbAttSen))
+                    .addComponent(lbAttSenPara))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -456,14 +464,14 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(18, 18, 18)
-                        .addComponent(cbTypeData, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbTypeDataPara, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jpResults, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnFile, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnFilePara, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnClean)
+                        .addComponent(btnCleanPara)
                         .addGap(18, 18, 18)
-                        .addComponent(btnAnalyze)))
+                        .addComponent(btnAnalyzePara)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -475,48 +483,48 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
-                            .addComponent(cbTypeData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbTypeDataPara, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAnalyze)
-                            .addComponent(btnClean)
-                            .addComponent(btnFile))
+                            .addComponent(btnAnalyzePara)
+                            .addComponent(btnCleanPara)
+                            .addComponent(btnFilePara))
                         .addGap(18, 18, 18)
                         .addComponent(jpResults, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 157, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tbResultsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbResultsMouseClicked
+    private void tbResultsParaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbResultsParaMouseClicked
         try {
-            cbNegative.setSelected(false);
-            cbPassive.setSelected(false);
-            cbPositive.setSelected(false);
-            cbSubjectivity.setSelected(false);
-            int row = tbResults.getSelectedRow();
-            txtSentence.setText(tbResults.getModel().getValueAt(row, 1).toString());
-            if (tbResults.getModel().getValueAt(row, 2).toString().equalsIgnoreCase("0.0")) {
-                cbPassive.setSelected(true);
+            cbNegativePara.setSelected(false);
+            cbPassivePara.setSelected(false);
+            cbPositivePara.setSelected(false);
+            cbSubjectivityPara.setSelected(false);
+            int row = tbResultsPara.getSelectedRow();
+            txtSentencePara.setText(tbResultsPara.getModel().getValueAt(row, 1).toString());
+            if (tbResultsPara.getModel().getValueAt(row, 2).toString().equalsIgnoreCase("0.0")) {
+                cbPassivePara.setSelected(true);
             } else {
-                cbSubjectivity.setSelected(true);
-                if (tbResults.getModel().getValueAt(row, 3).toString().equalsIgnoreCase("0.0")) {
-                    cbNegative.setSelected(true);
+                cbSubjectivityPara.setSelected(true);
+                if (tbResultsPara.getModel().getValueAt(row, 3).toString().equalsIgnoreCase("0.0")) {
+                    cbNegativePara.setSelected(true);
                 } else {
-                    cbPositive.setSelected(true);
+                    cbPositivePara.setSelected(true);
                 }
             }
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_tbResultsMouseClicked
+    }//GEN-LAST:event_tbResultsParaMouseClicked
 
-    private void cbTypeDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTypeDataActionPerformed
+    private void cbTypeDataParaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTypeDataParaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbTypeDataActionPerformed
+    }//GEN-LAST:event_cbTypeDataParaActionPerformed
 
-    private void btnFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileActionPerformed
+    private void btnFileParaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileParaActionPerformed
         JFileChooser chooser = new JFileChooser("");
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         int returnVal = chooser.showOpenDialog((java.awt.Component) null);
@@ -526,20 +534,20 @@ public class frmSentimentForPara extends javax.swing.JFrame {
                 FileReader fr = new FileReader(inFile);
                 BufferedReader br = new BufferedReader(fr);
                 try {
-                    txtaTest.read(br, null);
+                    txtaTestPara.read(br, null);
                 } catch (IOException ex) {
                     Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                txtaTest.requestFocus();
+                txtaTestPara.requestFocus();
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_btnFileActionPerformed
+    }//GEN-LAST:event_btnFileParaActionPerformed
 
-    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+    private void btnCleanParaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanParaActionPerformed
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("data\\dataProcessing\\subjectivity\\sen\\senTemp.txt"))) {
-            bw.write(txtaTest.getText());
+            bw.write(txtaTestPara.getText());
             bw.flush();
         } catch (IOException ex) {
             Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
@@ -548,66 +556,66 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         try {
             FileReader frSubTrain = new FileReader("data\\dataProcessing\\subjectivity\\sen\\sen.txt");
             try (BufferedReader br = new BufferedReader(frSubTrain)) {
-                txtaClean.read(br, null);
+                txtaCleanPara.read(br, null);
             }
-            txtaClean.requestFocus();
+            txtaCleanPara.requestFocus();
         } catch (IOException ex) {
             Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
         }
-        btnAnalyze.setEnabled(true);
-    }//GEN-LAST:event_btnCleanActionPerformed
+        btnAnalyzePara.setEnabled(true);
+    }//GEN-LAST:event_btnCleanParaActionPerformed
 
-    private void btnAnalyzeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalyzeActionPerformed
+    private void btnAnalyzeParaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalyzeParaActionPerformed
         int subSen, subSub, subPas, senSen, senPos, senNeg;
         double subPerSub, subPerPas, senPerPos, senPerNeg;
         try {
-            if (cbTypeData.getSelectedItem().toString().equalsIgnoreCase("Default")) {
+            if (cbTypeDataPara.getSelectedItem().toString().equalsIgnoreCase("Default")) {
                 copyFileForTrain("default");
             }
-            if (cbTypeData.getSelectedItem().toString().equalsIgnoreCase("Education")) {
+            if (cbTypeDataPara.getSelectedItem().toString().equalsIgnoreCase("Education")) {
                 copyFileForTrain("education");
             }
-            if (cbTypeData.getSelectedItem().toString().equalsIgnoreCase("Movie")) {
+            if (cbTypeDataPara.getSelectedItem().toString().equalsIgnoreCase("Movie")) {
                 copyFileForTrain("movie");
             }
-            if (cbTypeData.getSelectedItem().toString().equalsIgnoreCase("Sport")) {
+            if (cbTypeDataPara.getSelectedItem().toString().equalsIgnoreCase("Sport")) {
                 copyFileForTrain("sport");
             }
 
             trainSubjectivityIndirectForSentence();
             //trainSubjectivityDirForSentence();
             subSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\subjectivity\\sen\\");
-                subSub = readResult(new File("outputSub"), "src\\Data\\", "1.0");
-                    subPerSub = (double) subSub / subSen * 100;
-                    subPas = subSen - subSub;
-                    subPerPas = (double) 100 - subPerSub;
-                    lbSenSub.setText(Integer.toString(subSen));
-                    lbSub.setText(Integer.toString(subSub));
-                    lbPerSub.setText((double) Math.round(subPerSub * 10) / 10 + "%");
-                    lbPas.setText(Integer.toString(subPas));
-                    lbPerPas.setText((double) Math.round(subPerPas * 10) / 10 + "%");
-                    lbAttSub.setText(checkAttention(subPerSub));
+            subSub = readResult(new File("outputSub"), "src\\Data\\", "1.0");
+            subPerSub = (double) subSub / subSen * 100;
+            subPas = subSen - subSub;
+            subPerPas = (double) 100 - subPerSub;
+            lbSenSubPara.setText(Integer.toString(subSen));
+            lbSubPara.setText(Integer.toString(subSub));
+            lbPerSubPara.setText((double) Math.round(subPerSub * 10) / 10 + "%");
+            lbPasPara.setText(Integer.toString(subPas));
+            lbPerPasPara.setText((double) Math.round(subPerPas * 10) / 10 + "%");
+            lbAttSubPara.setText(checkAttention(subPerSub));
 
-                    exSentimentFileForSentence();
-                    trainSentimentIndirectForSentence();
-                    //trainSentimentDirForSentence();
-                    senSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\sentiment\\sen\\");
-                        senPos = readResult(new File("outputSen"), "src\\Data\\", "1.0");
-                            senPerPos = (double) senPos / senSen * 100;
-                            senNeg = senSen - senPos;
-                            senPerNeg = (double) 100 - senPerPos;
-                            lbSenSen.setText(Integer.toString(senSen));
-                            lbPos.setText(Integer.toString(senPos));
-                            lbPerPos.setText((double) Math.round(senPerPos * 10) / 10 + "%");
-                            lbNeg.setText(Integer.toString(senNeg));
-                            lbPerNeg.setText((double) Math.round(senPerNeg * 10) / 10 + "%");
-                            lbAttSen.setText(checkAttention(senPerPos));
+            exSentimentFileForSentence();
+            trainSentimentIndirectForSentence();
+            //trainSentimentDirForSentence();
+            senSen = readSentence(new File("senOUT.txt"), "data\\dataProcessing\\sentiment\\sen\\");
+            senPos = readResult(new File("outputSen"), "src\\Data\\", "1.0");
+            senPerPos = (double) senPos / senSen * 100;
+            senNeg = senSen - senPos;
+            senPerNeg = (double) 100 - senPerPos;
+            lbSenSenPara.setText(Integer.toString(senSen));
+            lbPosPara.setText(Integer.toString(senPos));
+            lbPerPosPara.setText((double) Math.round(senPerPos * 10) / 10 + "%");
+            lbNegPara.setText(Integer.toString(senNeg));
+            lbPerNegPara.setText((double) Math.round(senPerNeg * 10) / 10 + "%");
+            lbAttSenPara.setText(checkAttention(senPerPos));
 
-                            showResults();
-                        } catch (IOException ex) {
-                            Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-    }//GEN-LAST:event_btnAnalyzeActionPerformed
+            showResultsPara();
+        } catch (IOException ex) {
+            Logger.getLogger(frmSentimentAnalysis.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnAnalyzeParaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -644,15 +652,25 @@ public class frmSentimentForPara extends javax.swing.JFrame {
         });
     }
 
+    //--Hiển thị kết quả
+    private void showResultsPara() throws IOException {
+        modelResultsPara.setRowCount(0);
+        String[][] arr = readResultsPara();
+        for (int i = 0; i < arr.length; i++) {
+            modelResultsPara.insertRow(modelResultsPara.getRowCount(),
+                    new Object[]{Integer.toString(i + 1), arr[i][0], arr[i][1], arr[i][2]});
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAnalyze;
-    private javax.swing.JButton btnClean;
-    private javax.swing.JButton btnFile;
-    private javax.swing.JCheckBox cbNegative;
-    private javax.swing.JCheckBox cbPassive;
-    private javax.swing.JCheckBox cbPositive;
-    private javax.swing.JCheckBox cbSubjectivity;
-    private javax.swing.JComboBox cbTypeData;
+    private javax.swing.JButton btnAnalyzePara;
+    private javax.swing.JButton btnCleanPara;
+    private javax.swing.JButton btnFilePara;
+    private javax.swing.JCheckBox cbNegativePara;
+    private javax.swing.JCheckBox cbPassivePara;
+    private javax.swing.JCheckBox cbPositivePara;
+    private javax.swing.JCheckBox cbSubjectivityPara;
+    private javax.swing.JComboBox cbTypeDataPara;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -675,21 +693,21 @@ public class frmSentimentForPara extends javax.swing.JFrame {
     private javax.swing.JPanel jpResults;
     private javax.swing.JPanel jpSentiment;
     private javax.swing.JPanel jpSubjectivity;
-    private javax.swing.JLabel lbAttSen;
-    private javax.swing.JLabel lbAttSub;
-    private javax.swing.JLabel lbNeg;
-    private javax.swing.JLabel lbPas;
-    private javax.swing.JLabel lbPerNeg;
-    private javax.swing.JLabel lbPerPas;
-    private javax.swing.JLabel lbPerPos;
-    private javax.swing.JLabel lbPerSub;
-    private javax.swing.JLabel lbPos;
-    private javax.swing.JLabel lbSenSen;
-    private javax.swing.JLabel lbSenSub;
-    private javax.swing.JLabel lbSub;
-    private javax.swing.JTable tbResults;
-    private javax.swing.JTextArea txtSentence;
-    private javax.swing.JTextArea txtaClean;
-    private javax.swing.JTextArea txtaTest;
+    private javax.swing.JLabel lbAttSenPara;
+    private javax.swing.JLabel lbAttSubPara;
+    private javax.swing.JLabel lbNegPara;
+    private javax.swing.JLabel lbPasPara;
+    private javax.swing.JLabel lbPerNegPara;
+    private javax.swing.JLabel lbPerPasPara;
+    private javax.swing.JLabel lbPerPosPara;
+    private javax.swing.JLabel lbPerSubPara;
+    private javax.swing.JLabel lbPosPara;
+    private javax.swing.JLabel lbSenSenPara;
+    private javax.swing.JLabel lbSenSubPara;
+    private javax.swing.JLabel lbSubPara;
+    private javax.swing.JTable tbResultsPara;
+    private javax.swing.JTextArea txtSentencePara;
+    private javax.swing.JTextArea txtaCleanPara;
+    private javax.swing.JTextArea txtaTestPara;
     // End of variables declaration//GEN-END:variables
 }

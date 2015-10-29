@@ -84,7 +84,7 @@ public class main {
     }
 
     static void exSentimentFileForSentence() {
-        
+
         String[][] arr = new String[700][2];
         int n = 0;
         if (new File("src\\Data\\outputSub").exists()
@@ -143,7 +143,7 @@ public class main {
             return "Very low";
         }
     }
-    
+
     //--Đọc kết quả
     static String[][] readResults() throws FileNotFoundException, IOException {
         int n = 0;
@@ -197,7 +197,7 @@ public class main {
         j = 0;
         return arr;
     }
-    
+
     static String[][] readResultsPara() throws FileNotFoundException, IOException {
 
         int numOfPara = 0;
@@ -218,7 +218,16 @@ public class main {
         }
 
         String[][] arr = readResults();
-        String[][] arrResults = new String[numOfPara][2];
+        String[][] arrResults = new String[numOfPara][3];
+        try (FileReader fr = new FileReader("data\\dataProcessing\\subjectivity\\sen\\senTemp.txt");
+                BufferedReader br = new BufferedReader(fr)) {
+            int i = 0;
+            while ((line = br.readLine()) != null && i < numOfPara) {
+                arrResults[i][0] = line;
+                i++;
+            }
+        }
+        
         int tLine = 0;
         for (int i = 0; i < numOfPara; i++) {
             int numPas = 0;
@@ -240,14 +249,14 @@ public class main {
                 }
             }
             if (numSub == 0) {
-                arrResults[i][0] = "0.0";
-                arrResults[i][1] = "---";
+                arrResults[i][1] = "0.0";
+                arrResults[i][2] = "---";
             } else {
-                arrResults[i][0] = "1.0";
+                arrResults[i][1] = "1.0";
                 if (numNeg > numPos) {
-                    arrResults[i][1] = "0.0";
+                    arrResults[i][2] = "0.0";
                 } else {
-                    arrResults[i][1] = "1.0";
+                    arrResults[i][2] = "1.0";
                 }
             }
         }

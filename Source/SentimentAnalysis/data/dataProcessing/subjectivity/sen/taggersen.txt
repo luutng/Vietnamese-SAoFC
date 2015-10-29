@@ -1,5 +1,10 @@
 <doc>
 	<s>
+		<w pos="Np">Nam</w>
+		<w pos="V">học</w>
+		<w pos="N">bài</w>
+	</s>
+	<s>
 		<w pos="C">Vì thế</w>
 		<w pos=",">,</w>
 		<w pos="N">cô</w>

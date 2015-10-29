@@ -4,12 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/main/cleanData.java</file>
-            <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/SVM/IndirectMain.java</file>
             <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/SentimentAnalysis/subjectivity.java</file>
             <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/main/main.java</file>
             <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/main/frmSentimentAnalysis.java</file>
-            <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/SVM/DirectMain.java</file>
-            <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/SentimentAnalysis/sentiment.java</file>
+            <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/main/frmMain.java</file>
+            <file>file:/E:/UNIV/Vietnamese-SAoFC/Source/SentimentAnalysis/src/main/frmSentimentForPara.java</file>
         </group>
     </open-files>
 </project-private>

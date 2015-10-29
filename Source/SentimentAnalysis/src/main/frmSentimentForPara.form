@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -31,15 +31,15 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="cbTypeData" min="-2" pref="187" max="-2" attributes="0"/>
+                      <Component id="cbTypeDataPara" min="-2" pref="187" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jpResults" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnFile" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="btnFilePara" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnClean" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCleanPara" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnAnalyze" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAnalyzePara" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -55,17 +55,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbTypeData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbTypeDataPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnAnalyze" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnClean" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAnalyzePara" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCleanPara" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnFilePara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jpResults" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="157" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -89,15 +89,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTabbedPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane1" alignment="0" pref="468" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="cbSubjectivity" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbSubjectivityPara" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cbPassive" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbPassivePara" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cbPositive" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbPositivePara" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cbNegative" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbNegativePara" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
@@ -114,10 +114,10 @@
                   <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cbSubjectivity" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbPassive" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbPositive" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbNegative" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbSubjectivityPara" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPassivePara" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPositivePara" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbNegativePara" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -143,7 +143,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="txtaTest">
+                <Component class="javax.swing.JTextArea" name="txtaTestPara">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -165,7 +165,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="txtaClean">
+                <Component class="javax.swing.JTextArea" name="txtaCleanPara">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -187,7 +187,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tbResults">
+                <Component class="javax.swing.JTable" name="tbResultsPara">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="0">
@@ -202,7 +202,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbResultsMouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbResultsParaMouseClicked"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -216,7 +216,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="txtSentence">
+            <Component class="javax.swing.JTextArea" name="txtSentencePara">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
@@ -227,25 +227,25 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JCheckBox" name="cbSubjectivity">
+        <Component class="javax.swing.JCheckBox" name="cbSubjectivityPara">
           <Properties>
             <Property name="text" type="java.lang.String" value="Subjectivity"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="cbPassive">
+        <Component class="javax.swing.JCheckBox" name="cbPassivePara">
           <Properties>
             <Property name="text" type="java.lang.String" value="Passive"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="cbPositive">
+        <Component class="javax.swing.JCheckBox" name="cbPositivePara">
           <Properties>
             <Property name="text" type="java.lang.String" value="Positive"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="cbNegative">
+        <Component class="javax.swing.JCheckBox" name="cbNegativePara">
           <Properties>
             <Property name="text" type="java.lang.String" value="Negative"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -264,7 +264,7 @@
         <Property name="text" type="java.lang.String" value="Type:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cbTypeData">
+    <Component class="javax.swing.JComboBox" name="cbTypeDataPara">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -276,32 +276,32 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbTypeDataActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbTypeDataParaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnFile">
+    <Component class="javax.swing.JButton" name="btnFilePara">
       <Properties>
         <Property name="text" type="java.lang.String" value="File"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFileActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFileParaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnClean">
+    <Component class="javax.swing.JButton" name="btnCleanPara">
       <Properties>
         <Property name="text" type="java.lang.String" value="Clean"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanParaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAnalyze">
+    <Component class="javax.swing.JButton" name="btnAnalyzePara">
       <Properties>
         <Property name="text" type="java.lang.String" value="Analyze"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnalyzeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnalyzeParaActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jpResults">
@@ -357,7 +357,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" pref="74" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="lbAttSub" max="32767" attributes="0"/>
+                              <Component id="lbAttSubPara" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -368,14 +368,14 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lbSenSub" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="lbSub" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="lbSenSubPara" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="lbSubPara" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel4" min="-2" pref="74" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="lbPas" max="32767" attributes="0"/>
+                                      <Component id="lbPasPara" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -385,8 +385,8 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lbPerSub" alignment="0" pref="55" max="32767" attributes="0"/>
-                                  <Component id="lbPerPas" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbPerSubPara" alignment="0" pref="55" max="32767" attributes="0"/>
+                                  <Component id="lbPerPasPara" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -400,26 +400,26 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbSenSub" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbSenSubPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbSub" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPerSub" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbSubPara" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPerSubPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="lbPas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPerPas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPasPara" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPerPasPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbAttSub" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbAttSubPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
@@ -493,7 +493,7 @@
                 <Property name="text" type="java.lang.String" value="Sentence:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbSub">
+            <Component class="javax.swing.JLabel" name="lbSubPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -504,7 +504,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPas">
+            <Component class="javax.swing.JLabel" name="lbPasPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -515,7 +515,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbSenSub">
+            <Component class="javax.swing.JLabel" name="lbSenSubPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -526,7 +526,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPerSub">
+            <Component class="javax.swing.JLabel" name="lbPerSubPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -537,7 +537,7 @@
                 <Property name="text" type="java.lang.String" value="0%"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPerPas">
+            <Component class="javax.swing.JLabel" name="lbPerPasPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -548,7 +548,7 @@
                 <Property name="text" type="java.lang.String" value="0%"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbAttSub">
+            <Component class="javax.swing.JLabel" name="lbAttSubPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -578,7 +578,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel7" min="-2" pref="74" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="lbSenSen" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="lbSenSenPara" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -591,8 +591,8 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lbPos" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="lbNeg" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="lbPosPara" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="lbNegPara" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -601,11 +601,11 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lbPerPos" alignment="0" pref="55" max="32767" attributes="0"/>
-                                          <Component id="lbPerNeg" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="lbPerPosPara" alignment="0" pref="55" max="32767" attributes="0"/>
+                                          <Component id="lbPerNegPara" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="lbAttSen" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbAttSenPara" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -619,26 +619,26 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbSenSen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbSenSenPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPosPara" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPerPos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPerPosPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbNeg" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbNegPara" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPerNeg" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPerNegPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbAttSen" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbAttSenPara" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
@@ -712,7 +712,7 @@
                 <Property name="text" type="java.lang.String" value="Sentence:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPos">
+            <Component class="javax.swing.JLabel" name="lbPosPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -723,7 +723,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbNeg">
+            <Component class="javax.swing.JLabel" name="lbNegPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -734,7 +734,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbSenSen">
+            <Component class="javax.swing.JLabel" name="lbSenSenPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -745,7 +745,7 @@
                 <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPerPos">
+            <Component class="javax.swing.JLabel" name="lbPerPosPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -756,7 +756,7 @@
                 <Property name="text" type="java.lang.String" value="0%"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbPerNeg">
+            <Component class="javax.swing.JLabel" name="lbPerNegPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
@@ -767,7 +767,7 @@
                 <Property name="text" type="java.lang.String" value="0%"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbAttSen">
+            <Component class="javax.swing.JLabel" name="lbAttSenPara">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>

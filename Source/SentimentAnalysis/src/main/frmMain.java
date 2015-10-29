@@ -57,6 +57,7 @@ public class frmMain extends javax.swing.JFrame {
         cbDefault = new javax.swing.JCheckBox();
         btnRunSVM = new javax.swing.JButton();
         btnDictionary = new javax.swing.JButton();
+        btnSentimentAnalysisPara = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Main Processing");
@@ -126,7 +127,7 @@ public class frmMain extends javax.swing.JFrame {
             .addGroup(jpTrialDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpTrialDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
                     .addGroup(jpTrialDataLayout.createSequentialGroup()
                         .addComponent(cbSubjectivity)
                         .addGap(18, 18, 18)
@@ -188,7 +189,7 @@ public class frmMain extends javax.swing.JFrame {
                 .addGroup(jpCrossValidationAccuracyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbPercentSub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbPercentSen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -278,6 +279,13 @@ public class frmMain extends javax.swing.JFrame {
             }
         });
 
+        btnSentimentAnalysisPara.setText("Sentiment Analysis Para");
+        btnSentimentAnalysisPara.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSentimentAnalysisParaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -285,7 +293,7 @@ public class frmMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jpTrialData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jpCrossValidationAccuracy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRunSVM, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -293,7 +301,8 @@ public class frmMain extends javax.swing.JFrame {
                     .addComponent(btnDictionary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jpDatasets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnSentimentAnalysisPara, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -302,16 +311,19 @@ public class frmMain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jpTrialData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
+                        .addContainerGap()
                         .addComponent(btnDictionary)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jpDatasets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnRunSVM)
                         .addGap(18, 18, 18)
                         .addComponent(jpCrossValidationAccuracy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSentimentAnalysis)))
+                        .addComponent(btnSentimentAnalysis)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSentimentAnalysisPara)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -506,6 +518,12 @@ public class frmMain extends javax.swing.JFrame {
         cbSport.setSelected(false);
     }//GEN-LAST:event_cbDefaultActionPerformed
 
+    private void btnSentimentAnalysisParaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSentimentAnalysisParaActionPerformed
+        // TODO add your handling code here:
+        frmSentimentForPara sa = new frmSentimentForPara();
+        sa.setVisible(true);
+    }//GEN-LAST:event_btnSentimentAnalysisParaActionPerformed
+
     private String[][] readDataTest(String type) throws FileNotFoundException, IOException {
         int n;
         try (BufferedReader subResults = new BufferedReader(new FileReader("data\\dataProcessing\\" + type + "\\sub\\resultstrain.txt"))) {
@@ -615,6 +633,7 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JButton btnDictionary;
     private javax.swing.JButton btnRunSVM;
     private javax.swing.JButton btnSentimentAnalysis;
+    private javax.swing.JButton btnSentimentAnalysisPara;
     private javax.swing.JCheckBox cbDefault;
     private javax.swing.JCheckBox cbEducation;
     private javax.swing.JCheckBox cbMovie;
